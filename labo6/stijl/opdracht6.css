@@ -1,0 +1,6 @@
+.checklist {
+    list-style-image: url("../opdrachten/gfx/unchecked.png");
+}
+.checklist .checked{
+    list-style-image: url("../opdrachten/gfx/checked.png");
+}
