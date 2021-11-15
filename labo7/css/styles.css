@@ -1,0 +1,112 @@
+img {
+    width: 100px;
+    display: block;
+}
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+a:visited {
+    color: #770c0c;
+}
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    background-image: url("../gfx/eu4map.png");
+    background-size: 3200px auto;
+    width: 1000px;
+}
+h1 {
+    margin: 90px 50px 50px 275px;
+    padding: 5px;
+    background-color: darkgray;
+    font-size: 50px;
+    width: 700px;
+}
+section {
+    background-color: gray;
+    margin: 5px;
+    padding: 5px;
+
+}
+#profielfoto {
+    width: 200px;
+    margin-left: 50px;
+ }
+aside {
+    background-color: silver;
+    font-size: 15px;
+    width: 500px;
+    margin: 5px;
+}
+thead {
+    background-color: deepskyblue;
+}
+.vrienden thead{
+    background-color: forestgreen;
+    border: black solid;
+}
+th,td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+table{
+    border: black solid;
+    width: 100%;
+    border-collapse: collapse;
+}
+.onbekend {
+     background-color: red;
+ }
+.homepage tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+nav {
+    font-size: 20px;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+}
+nav a {
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #00ffc8;
+    padding: 5px;
+}
+nav a:visited {
+    color: rgba(66, 4, 4, 0.61);
+}
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.kalender th {
+    color: rgb(200,190,240);
+    background-color: rgb(35,37,70);
+}
+.kalender thead th {
+    background-color: rgb(170,170,200);
+    color: black;
+}
+
+.week td:first-child, .week td:last-child {
+    background-color: rgb(255,220,220);
+}
+.feestdag {
+    background-color: rgb(250,120,120);
+}
+.kalender .week>.notThisMonth{
+    background-color: gray;
+    color: dimgray;
+}
+.kalender {
+    background-color: white;
+}

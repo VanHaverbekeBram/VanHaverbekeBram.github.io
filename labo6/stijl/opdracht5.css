@@ -15,18 +15,15 @@ a:hover{
     border: 1px dotted;
 }
 a::before{
-    width: 0;
-    height: 22px;
     content: "";
     background-image: url("../opdrachten/gfx/logo2.png");
-    background-size: 100% 100%;
-    position: absolute;
-    padding-left: 22px;
-    margin-left: -22px;
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    /*position: absolute;*/
+    /*padding-left: 22px;
+    margin-left: -22px;*/
 
 
-}
-a {
-
-    padding-left: 22px;
 }

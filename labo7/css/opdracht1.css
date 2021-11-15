@@ -1,0 +1,43 @@
+body {
+    width: 1200px;
+    font-family: Verdana, sans-serif;
+    margin: 0 auto;
+    font-size: 10px;
+}
+#title {
+    background-image: url("../gfx/header.jpg");
+    height: 100px;
+}
+#title h1 {
+    /*color: white;*/
+    color: #FFFFFF;
+    font-size: 35px;
+    margin: 10px;
+}
+nav {
+    background-color: darkslategray;
+    color: #000000;
+    font-size: 14px;
+}
+nav a {
+    color: #00ffc8;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav a:visited {
+    color: chartreuse;
+}
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+article {
+    background-color: lightgray;
+    padding: 5px;
+    margin: 5px;
+}
+article h1 {
+    text-decoration: underline;
+    font-size: 17px;
+    color: darkslategray;
+}
