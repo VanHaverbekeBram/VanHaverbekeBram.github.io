@@ -1,0 +1,75 @@
+body {
+    font-family: Verdana, Helvetica, Arial;
+    font-size: 1.2em;
+    text-align: center;
+}
+.floaty {
+    float: right;
+}
+section {
+    width: 70%;
+    text-align: left;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+}
+.specials {
+    width: 30%;
+    padding: 0 20px 0 20px;
+    text-align: center;
+    border: blue solid 2px;
+    box-sizing: border-box;
+}
+div {
+    width: 95%;
+}
+h1 {
+    font-size: 150%;
+    color: #007e7e;
+}
+h2 {
+    font-size: 130%;
+    color: #007e7e;
+}
+.specials h1{
+    color: black;
+    background-image: url("images/cocktail.gif");
+    background-size: 100px 100px;
+    margin-top: 0;
+    padding-top: 80px;
+}
+.specials h2{
+    color: darkred;
+}
+.specials a:hover {
+    color: saddlebrown;
+}
+#guarantee {
+    margin: 30px;
+    padding: 20px 20px 20px 70px;
+    color: #444444;
+    background-color: #a7cece;
+    border: 1px dotted white;
+    position: relative;
+}
+/*#guarantee::before {
+    content: "";
+    background-image: url("images/background.gif");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}*/
+.cursief {
+    font-style: italic;
+}
+.vet {
+    font-weight: bold;
+}
+#guarantee img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+footer {
+    font-size: 0.6em;
+}
