@@ -6,7 +6,9 @@ div {
 	width:100px;
 	height:100px;
 	background:red;
-	display: inline-block;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .tall {
@@ -15,6 +17,7 @@ div {
 
 .short {
 	height:50px;
+
 }
 
 .floaty{
