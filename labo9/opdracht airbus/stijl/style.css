@@ -1,27 +1,98 @@
 body {
-    font-family: Arial Helvetica sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: lightgray url("../fotos/pagebackground.png") repeat-y center;
     width: 960px;
     margin: 0 auto;
 }
-.top {
+header {
     text-align: center;
     height: 200px;
     background-image: url("../fotos/bgsky3.jpg");
     color: darkblue;
 }
-.top img {
-    float: right;
+header img {
     position: relative;
-    right: 90px;
-    bottom: 0px;
+    right: -270px;
+    bottom: 160px;
 }
-.top p:first-child {
+header p:first-child {
     font-weight: bold;
     font-size: 300%;
     font-style: italic;
+    margin: 0;
 }
-.top p:nth-child(2) {
+header p:nth-child(2) {
     font-size: 240%;
     font-weight: bold;
+}
+aside {
+    width: 250px;
+    display: block;
+    background-color: #dddddd;
+    border: solid 1px #999999;
+    float: right;
+    color: #666666;
+    font-size: 90%;
+}
+aside h3 {
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    background-color: blue;
+}
+aside p {
+    margin: 10px;
+}
+main {
+    width: 700px;
+    margin-right: 10px;
+}
+section img{
+    float: left;
+    margin: 20px 20px 80px 20px;
+}
+main section {
+    text-align: left;
+    margin: 20px 30px 20px 0;
+}
+section:nth-child(2) img {
+    margin: 0;
+    float: none;
+}
+main section:nth-child(2) {
+    background-color: #999999;
+    margin: 0;
+    padding-bottom: 20px;
+}
+main span {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+.foto {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    background-color: white;
+    margin: 20px 0 0 20px;
+    border: 1px dotted #999999;
+}
+article {
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+}
+article section {
+    margin: 0 0 0 120px;
+    display: inline-block;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: red;
+}
+footer {
+    text-align: center;
 }
