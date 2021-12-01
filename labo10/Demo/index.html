@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Responsive</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            border: 1px solid red;
+            padding: 15px;
+        }
+
+        /*Responsive Web Design - Grid View */
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            border: 1px solid red;
+        }
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        /*meeschalen images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+
+        /* Media Queries */
+        @media only screen and (max-width: 767px) {
+            .menu {
+                display: none;
+            }
+            .content{
+                width: 100%;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 967px) {
+            #video {
+                display: none;
+            }
+
+        }
+
+        .text-red {
+                color: #f44336
+            }
+
+        .lavender{
+            background-color:lavender;
+        }
+        .lavenderblush {
+        background-color:lavenderblush;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Reponsive Web Design</h1>
+</div>
+
+
+
+    <div class="col-3 menu">
+        <ul>
+            <li><a href="#Viewport">Viewport</a></li>
+            <li><a href="#ImageScale">Images meeschalen</a></li>
+            <li><a href="#MediaQueries">Media Queries</a></li>
+            <li><a href="#MobileFirst">Mobile First</a></li>
+            <li><a href="#GridView">Grid View</a></li>
+            <li><a href="#Bootstrap">Bootstrap</a></li>
+        </ul>
+    </div>
+
+    <div class="col-9 content">
+        <article id="Viewport">
+            <h1>Viewport</h1>
+            <p>Viewport is het zichtbare gebied op een webpagina voor de gebruiker</p>
+
+
+
+            <p>Met de komst van mobiele toestellen, werden die pagina's te groot, te breed, ... En om dat te fixen gingen browsers op mobiele toestellen de webpagina gaan verkleinen om op het scherm te passen. => Quick Fix
+            </p>
+            <p>In HTML5 kunnen webontwikkelaars de controle over de viewport overnemen. Dit via de &lt;meta&gt; tag</p>
+            <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+            <p>
+                <span class="text-red">width=device-width</span> : stelt de breedte van de pagina in op de breedte van het device<br>
+                <span class="text-red">initial-scale=1.0</span> : stelt het initial zoom level in bij het laden van de pagina
+            </p>
+            <span>Enkele tips:</span>
+            <ul>
+                <li>Gebruikers mogen enkel verticaal scrollen, nooit horizontaal</li>
+                <li>Gebruiker die moet zoomen => slechte UX</li>
+                <li>Gebruik geen grote, brede fixed width elementen</li>
+                <li>Gebruik CSS3 Media Queries</li>
+            </ul>
+
+        </article>
+        <article id="ImageScale">
+                <h1>Images meeschalen</h1>
+
+                <img src="http://placehold.it/720x250">
+
+                <p>Laat images meeschalen met de viewport</p>
+                <pre>img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+                </pre>
+                <pre>img {
+                        max-width: 100%; /* laat image meeschalen, maar nooit groter dan zijn origineel formaat */
+                        height: auto;
+                        display: block;
+                    }
+                </pre>
+        </article>
+        <article id="MediaQueries">
+            <h1>Media Queries</h1>
+                <p>Gebruik van Media Queries is een <span class="text-red">CSS3</span> techniek</p>
+                <p>Met de <span class="text-red">@media</span> rule kan een webontwikkelaar CSS properties toevoegen enkel en alleen als aan een bepaalde conditie is voldaan. Zo kan je verschillende CSS rules definiëren voor verschillende soorten devices.</p>
+                <p>Meestal wordt de breedte van het scherm als uitgangspunt genomen. Ook wel breakpoint genoemd</p>
+                <p><a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target="_blank"><i class="fa fa-hand-o-right fa-fw margin-right xxlarge text-red"></i></a>Meer op w3schools
+                </p>
+                <div class="center">
+                    <iframe id="video" width='560' height='315' src='https://www.lynda.com/player/embed/803075?fs=3&w=560&h=315&ps=paused&utm_medium=referral&utm_source=embed+video&utm_campaign=ldc-website&utm_content=vid-803075' mozallowfullscreen='true' webkitallowfullscreen='true' allowfullscreen='true' frameborder='0'></iframe><div style="margin-bottom:10px"><strong><a href="https://www.lynda.com/HTML-tutorials/Responsive-Layout/743192-2.html" title="Learn how to design responsive layouts with HTML and CSS, including the latest standards: Flexbox and Grid.">Responsive Layout</a></strong> by <a href="https://www.lynda.com/author/9253753">Clarissa Peterson</a></div>
+                </div>
+        </article>
+        <article id="MobileFirst">
+            <h1>Mobile First</h1>
+            <p>
+                <span class="text-red">Mobile First</span> wil zeggen: Altijd eerst voor mobile ontwikkelen voordat je ontwikkelt voor een ander device!
+            </p>
+            <p>
+                Maw: de CSS voor mobile is de standaard. Deze CSS heeft geen mediaqueries. Moet onze pagina er anders uitzien op andere devices, dan voegen we extra CSS toe met mediaqueries voor die devices
+            </p>
+        </article>
+        <article id="GridView">
+            <h1>Grid View</h1>
+            <p>Many web pages are based on a grid-view, which means that the page is divided into columns:</p>
+
+
+            Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page.
+            <img src="images/RWD_Grid.JPG" alt="Grid View"/>
+            <pre>
+                * {
+
+                    box-sizing: border-box;
+                }
+                /*zorgt ervoor dat padding en border zijn inbegrepen in de totale breedte en hoogte van een element*/
+                </pre>
+                <pre>
+                    .col-1 {width: 8.33%;}
+                    .col-2 {width: 16.66%;}
+                    .col-3 {width: 25%;}
+                    .col-4 {width: 33.33%;}
+                    .col-5 {width: 41.66%;}
+                    .col-6 {width: 50%;}
+                    .col-7 {width: 58.33%;}
+                    .col-8 {width: 66.66%;}
+                    .col-9 {width: 75%;}
+                    .col-10 {width: 83.33%;}
+                    .col-11 {width: 91.66%;}
+                    .col-12 {width: 100%;}
+                </pre>
+                <pre>
+                    [class*="col-"]
+                    {
+                    float: left;
+                    padding: 15px;
+                    }
+                </pre>
+
+                    <div>
+                        <div class="col-3">...</div>
+                         <div class="col-9">...</div>
+                    </div>
+
+        </article>
+        <article id="Bootstrap">
+            <h1>Bootstrap</h1>
+            <p>Bootstrap is gratis en open source. In dit framework vind je sjablonen gebaseerd op HTML en CSS. Deze set van elementen voor HTML en CSS is vrij uitgebreid. Ze kunnen gebruikt worden voor typografie, formulieren, knoppen, navigatie en andere interfaceonderdelen. Het framework bevat ook Javascript-extensies. </p>
+
+            <p>Bootstrap werd bedoeld om het ontwikkelen van websites eenvoudiger te maken. Het framework werd ontwikkeld door twee ontwikkelaars van Twitter: Mark Otto en Jacob Thornton. Zij zorgden er met Bootstrap voor dat de interface van de microblogdienst op een consistente manier kon worden ontwikkeld. In het begin was het de bedoeling dat het framework enkel binnen Twitter zou worden gebruikt. </p>
+            <p>The Bootstrap 4 grid system has five classes:</p>
+            <ul>
+                <li> .col- (extra small devices - screen width less than 576px)</li>
+                <li> .col-sm- (small devices - screen width equal to or greater than 576px)</li>
+                <li>.col-md- (medium devices - screen width equal to or greater than 768px)</li>
+                <li> .col-lg- (large devices - screen width equal to or greater than 992px)</li>
+                <li> .col-xl- (xlarge devices - screen width equal to or greater than 1200px)</li>
+            </ul>
+
+            <div class="container-fluid">
+                <h1>Responsive Columns</h1>
+                <p>Resize the browser window to see the effect.</p>
+                <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
+                <div class="row">
+                    <div class="col-md-3 lavender">.col-md-3</div>
+                    <div class="col-md-3 lavenderblush">.col-md-3</div>
+                    <div class="col-md-3 lavender">.col-md-3</div>
+                    <div class="col-md-3 lavenderblush">.col-md-3</div>
+                </div>
+            </div>
+        </article>
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>
