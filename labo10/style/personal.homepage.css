@@ -19,6 +19,11 @@ body {
     background: url("../gfx/eu4map.png") fixed;
 
 }
+div[class*="col"] {
+    height: 200px;
+    box-sizing: border-box;
+    border: 10px solid white;
+}
 h1 {
     margin: 90px 50px 50px 5px;
     padding: 5px;
