@@ -1,0 +1,74 @@
+html, body {
+    width: 100%;
+    background-image: url("../stripverloopokapi.jpg");
+    background-size: contain;
+    font-family: sans-serif;
+}
+main {
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(236,234,222);
+    border: black solid 3px;
+}
+nav {
+    width: 80%;
+    margin: 0 auto;
+}
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+li {
+    list-style: none;
+}
+figure {
+    float: right;
+    padding: 0;
+}
+figure img {
+    border: black solid 2px;
+    width: 100%;
+    margin: 15px 0;
+    padding: 0;
+}
+aside {
+    border: black solid 2px;
+    font-weight: bold;
+    padding: 5px;
+    font-style: italic;
+}
+.left {
+    float: left;
+    height: 180px;
+    width: auto;
+    margin: 0 5px 5px 0;
+    border: black solid 2px;
+}
+header img{
+    height: 180px;
+    position: relative;
+    left: 40%;
+}
+[class*="col"]{
+    margin: 0;
+    padding: 0;
+}
+footer {
+    width: 100%;
+    text-align: right;
+    border-top: 5px black solid;
+    height: 80px;
+    padding: 15px;
+}
+h2:before, aside:before {
+content: open-quote;
+}
+h2:after, aside:after {
+    content: close-quote;
+}
+header {
+    border-bottom: 3px black solid;
+    padding: 0;
+    background-image: url("../headerokapi.jpg");
+    background-size: 100% 100%;
+}
