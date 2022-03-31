@@ -12,70 +12,90 @@ const valideer = () => {
 }
 
 const valideerVoornaam = () => {
-    let voornaam = document.getElementById("voornaam").value.trim();
+    let txtVoornaam = document.getElementById("txtVoornaam");
+    let errVoornaam = document.getElementById("errVoornaam");
+    let voornaam = txtVoornaam.value.trim()
     if (voornaam.length > 30){
-        console.log("max. 30 karakters");
+        reportError(txtVoornaam, errVoornaam, "max. 30 karakters");
     }else {
-        console.log("geldige voornaam");
+        clearError(txtVoornaam, errVoornaam);
     }
 }
 const valideerFamilienaam = () => {
-    let familienaam = document.getElementById("familienaam").value.trim();
+    let txtFamilienaam = document.getElementById("txtFamilienaam");
+    let errFamilienaam = document.getElementById("errFamilienaam");
+    let familienaam = txtFamilienaam.value.trim();
     if (familienaam === ""){
-        console.log("verplicht veld");
+        reportError(txtFamilienaam, errFamilienaam, "verplicht veld");
     }else if (familienaam.length > 50){
-        console.log("max 50 karakters");
+        reportError(txtFamilienaam, errFamilienaam, "max. 50 karakters");
     }else {
-        console.log("geldige familienaam");
+        clearError(txtFamilienaam, errFamilienaam);
     }
 }
 const valideerGeboortedatum = () => {
-    let geboortedatum = document.getElementById("geboortedatum").value.trim();
+    let txtGeboortedatum = document.getElementById("txtGeboortedatum");
+    let errGeboortedatum = document.getElementById("errGeboortedatum");
+    let geboortedatum = txtGeboortedatum.value.trim();
     if (geboortedatum === ""){
-        console.log("verplicht veld")
+        reportError(txtGeboortedatum, errGeboortedatum, "verplicht veld");
     } else if (geboortedatum.length === 10 && geboortedatum.indexOf('-') === 4 && geboortedatum.lastIndexOf('-') === 7){
         let jaar = geboortedatum.split('-')[0];
         let maand = geboortedatum.split('-')[1];
         let dag = geboortedatum.split('-')[2];
         if (isGetal(jaar)  && isGetal(maand) && isGetal(dag)){
-            console.log("geldige datum");
+            clearError(txtGeboortedatum, errGeboortedatum);
         }else {
-            console.log("ongeldige waarden in de datum");
+            reportError(txtGeboortedatum, errGeboortedatum, "ongeldige waarden in de datum");
         }
     }else {
-        console.log("formaat is niet jjjj-mm-dd");
+        reportError(txtGeboortedatum, errGeboortedatum, "formaat is niet jjjj-mm-dd");
     }
 }
 const valideerEmail = () => {
-    let email = document.getElementById("email").value.trim();
+    let txtEmail = document.getElementById("txtEmail");
+    let errEmail = document.getElementById("errEmail");
+    let email = txtEmail.value.trim();
     console.log(email);
     let index = email.indexOf("@");
     console.log(email.lastIndexOf("@"));
     console.log(email.length);
 
 
-    email.index
+
     if (email === ""){
-        console.log("verplicht veld");
+        reportError(txtEmail, errEmail, "verplicht veld");
     }else if (index === email.indexOf("@") && index > 0 && index < email.length  - 1){
-        console.log("geldig emailadres");
+        clearError(txtEmail, errEmail);
     }else {
-        console.log("ongeldig emailadres");
+        reportError(txtEmail, errEmail, "ongeldig emailadres");
     }
 }
 const valideerAantalKinderen = () => {
-    let aantalKinderen = document.getElementById("kinderen").value.trim();
+    let txtAantalKinderen = document.getElementById("txtKinderen");
+    let errAantalKinderen = document.getElementById("errKinderen");
+    let aantalKinderen = txtAantalKinderen.value.trim();
     if (aantalKinderen < 0){
-        console.log("is geen positief getal");
+        reportError(txtAantalKinderen, errAantalKinderen, "is geen positief getal");
     }else if (aantalKinderen > 99){
-        console.log("is te vruchtbaar");
+        reportError(txtAantalKinderen, errAantalKinderen, "is te vruchtbaar");
     }else {
-        console.log("geldig aantal kinderen");
+        clearError(txtAantalKinderen, errAantalKinderen);
     }
 }
 
 const isGetal = (tekst) => {
     return !isNaN(tekst);
 }
+
+const reportError = (element, errElement, message) => {
+    element.className="invalid";
+    errElement.innerHTML = message;
+};
+
+const clearError = (element, errElement) => {
+    element.className="";
+    errElement.innerHTML = "";
+};
 
 window.addEventListener('load', setup);
