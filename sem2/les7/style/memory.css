@@ -1,0 +1,9 @@
+img {
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+}
+#speelveld{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
