@@ -1,9 +1,16 @@
 img {
     width: 150px;
     height: 150px;
-    padding: 25px;
+    margin: 25px;
+    box-sizing: border-box;
+    padding: -20px;
+    border-collapse: collapse;
+}
+img:hover{
+    transform: scale(1.5);
 }
 #speelveld{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
