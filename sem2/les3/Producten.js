@@ -18,9 +18,4 @@ const bereken = () => {
     totaal.textContent = tot.toFixed(2) + " Eur";
 }
 
-
-
-
-
-
 addEventListener("load",setup);
