@@ -1,0 +1,32 @@
+body{
+    padding: 0 200px 0 200px;
+    font-family: Calibri, sans-serif;
+}
+#history{
+    width: 940px;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 300px 300px 300px;
+}
+
+#history>div{
+    border-radius: 10px;
+    padding: 0 10px 10px 10px;
+    color: white;
+}
+.Youtube{
+    background-color: #ff0000;
+}
+
+.Google{
+    background-color: #4285f4;
+}
+
+.Twitter{
+    background-color:  #1da1f2;
+}
+
+.Instagram{
+    background-color: #c32aa3;
+}
