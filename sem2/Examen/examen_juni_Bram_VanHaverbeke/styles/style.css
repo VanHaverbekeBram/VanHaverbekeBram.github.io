@@ -1,0 +1,62 @@
+body {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 0;
+}
+
+#todos {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 1em;
+}
+
+#new {
+  min-height: 190px;
+}
+
+.todo {
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 1em;
+  background-color: #7e8ebb82;
+}
+
+.expired {
+  background-color: #ce000082;
+}
+
+.hidden {
+  display: none;
+}
+
+.new > button {
+  width: 100%;
+  height: 100%;
+  font-size: 6em;
+  border: 1px solid #000;
+  border-radius: 7px;
+}
+
+.input-group, .submit-group {
+  margin-top: 0.3em;
+}
+
+.input-group > * {
+  display: block;
+  width: 95%;
+}
+
+.invalid {
+  border: 3px solid red;
+}
+
+footer {
+  margin-top: 3em;
+}
+
+footer button {
+  padding: 0.5em;
+}
